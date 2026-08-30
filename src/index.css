@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+  --bg-primary: #121212; /* Darker grey/black background */
+  --bg-secondary: #1a1a1a;
+  --bg-card: #181818;
+  --border-color: rgba(255, 255, 255, 0.08);
+  
+  --text-main: #ffffff;
+  --text-muted: #888888;
+  
+  --accent: #f9004d; /* Pinkish-red accent from design */
+  --accent-hover: #c4003d;
+
+  --font-sans: 'Poppins', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary) !important;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary) !important;
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section-title span {
+  color: var(--accent);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 35px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: #fff;
+  border: 2px solid var(--accent);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--accent);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-main);
+  border: 2px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Inputs */
+input, textarea {
+  width: 100%;
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  padding: 15px 20px;
+  font-family: var(--font-sans);
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--accent);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Utilities */
+.text-accent {
+  color: var(--accent);
+}
+.bg-accent {
+  background-color: var(--accent);
+}
+.grid {
+  display: grid;
+}
+
