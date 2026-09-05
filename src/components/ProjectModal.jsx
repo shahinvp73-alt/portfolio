@@ -162,8 +162,13 @@ export default function ProjectModal({ project, onClose }) {
           <button onClick={onClose} className="btn-secondary" style={{ padding: '10px 20px', fontSize: '0.9rem' }}>
             Close
           </button>
-          <a href={project.githubUrl} target="_blank" rel="noreferrer" className="btn-primary" style={{ padding: '10px 20px', fontSize: '0.9rem' }}>
-            <GithubIcon size={16} /> View GitHub Repo
+          {project.link && (
+            <a href={project.link} target="_blank" rel="noreferrer" className="btn-primary" style={{ padding: '10px 20px', fontSize: '0.9rem', background: 'rgba(16, 185, 129, 0.1)', color: '#10b981', border: '1px solid rgba(16, 185, 129, 0.2)' }}>
+              <ExternalLink size={16} /> Live Demo
+            </a>
+          )}
+          <a href={project.githubUrl || "#"} target="_blank" rel="noreferrer" className="btn-primary" style={{ padding: '10px 20px', fontSize: '0.9rem' }}>
+            <GithubIcon size={16} /> View Code
           </a>
         </div>
 

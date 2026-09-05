@@ -29,7 +29,7 @@ export const services = [
     id: 1,
     title: "Full Stack Dev",
     description: "End-to-end development using React, Django, and PostgreSQL.",
-    icon: "Monitor" 
+    icon: "Monitor"
   },
   {
     id: 2,
@@ -77,10 +77,10 @@ export const services = [
 
 export const history = [
   {
-    year: "July 2026",
-    title: "E-Commerce Web Application",
-    role: "Elite / E-Commerce",
-    description: "Developed an e-commerce web application using React.js, Django, Django REST Framework (DRF), and PostgreSQL. Implemented user authentication, product management, shopping cart, and order management features while designing RESTful APIs and responsive user interfaces."
+    year: "Mar 2025",
+    title: "Hubify (Academic Project)",
+    role: "Web & Mobile Platform",
+    description: "Developed an integrated online platform named Hubify consisting of a user application and separate web portals for service providers and administrators. Designed responsive front-end interfaces using HTML5, CSS3, Flutter and JavaScript."
   },
   {
     year: "Jan 2022 - Dec 2025",
@@ -117,9 +117,11 @@ export const projects = [
   {
     id: "institute-management-system",
     date: "June 2026",
-    title: "Institute Management System (Hide & Seek)",
+    title: "Institute Management System",
     category: "Educational Web App",
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80",
+    link: "https://study-institute.vercel.app/",
+    githubUrl: "https://github.com/shahinvp/study-institute.git",
     description: "Developed a scalable full-stack Institute Management System using React.js, Django REST Framework, and PostgreSQL with secure authentication, RBAC, RESTful APIs, and responsive user interfaces.",
     technologies: ["React.js", "Django", "Django REST Framework", "PostgreSQL"],
     highlights: [
@@ -129,19 +131,19 @@ export const projects = [
     ]
   },
   {
-    id: "hubify",
-    date: "Mar 2025",
-    title: "Hubify (Academic Project)",
-    category: "Web & Mobile Platform",
+    id: "e-commerce",
+    date: "July 2026",
+    title: "E-Commerce Web Application",
+    category: "E-Commerce",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
-    description: "Developed an integrated online platform named Hubify consisting of a user application and separate web portals for service providers and administrators. Designed responsive front-end interfaces using HTML5, CSS3, Flutter and JavaScript.",
-    technologies: ["HTML5", "CSS3", "Flutter", "JavaScript", "PostgreSQL"],
+    link: "https://e-commerce-phi-dun-83.vercel.app/",
+    githubUrl: "https://github.com/shahinvp/E-commerce.git",
+    description: "Developed an e-commerce web application using React.js, Django, Django REST Framework (DRF), and PostgreSQL. Implemented user authentication, product management, shopping cart, and order management features while designing RESTful APIs and responsive user interfaces.",
+    technologies: ["React.js", "Django", "Django REST Framework", "PostgreSQL"],
     highlights: [
-      "Developed an integrated online platform named Hubify consisting of a user application and separate web portals for service providers and administrators.",
-      "Designed and developed responsive front-end interfaces using HTML5, CSS3, Flutter and JavaScript for a seamless user experience across multiple devices.",
-      "Implemented secure user authentication and role-based access control (RBAC) to manage different user types.",
-      "Collaborated with a development team to test, debug, and deploy the application while incorporating user feedback to improve functionality and reliability.",
-      "Integrated a PostgreSQL relational database to manage user data, service listings, bookings, and transaction history with proper validation and backup strategies."
+      "Developed an e-commerce web application using React.js, Django, Django REST Framework (DRF), and PostgreSQL.",
+      "Implemented user authentication, product management, shopping cart, and order management features.",
+      "Designed RESTful APIs and responsive user interfaces."
     ]
   },
   {
@@ -150,6 +152,8 @@ export const projects = [
     title: "Task Management",
     category: "Productivity App",
     image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=600&q=80",
+    link: "https://task-manager-project-weld.vercel.app/",
+    githubUrl: "https://github.com/shahinvp/Task_manager_project.git",
     description: "Built a task management application for organizing daily work. Implemented authentication, CRUD operations, and task status tracking. Designed RESTful APIs and responsive frontend interfaces.",
     technologies: ["React.js", "Django", "Django REST Framework", "PostgreSQL"],
     highlights: [

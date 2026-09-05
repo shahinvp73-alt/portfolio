@@ -94,7 +94,7 @@ export default function Projects() {
                 flexDirection: 'column',
                 justifyContent: 'space-between',
                 padding: '32px',
-                border: project.featured ? '1px solid rgba(56, 189, 248, 0.3)' : '1px solid rgba(255, 255, 255, 0.08)'
+                border: project.featured ? '1px solid rgba(56, 189, 248, 0.3)' : '1px solid rgba(255, 255, 255, 0.08)',
               }}
             >
               <div>
@@ -178,7 +178,7 @@ export default function Projects() {
                 }}
               >
                 <button
-                  onClick={() => setActiveProjectModal(project)}
+                  onClick={(e) => { e.stopPropagation(); setActiveProjectModal(project); }}
                   style={{
                     background: 'transparent',
                     border: 'none',
@@ -192,27 +192,52 @@ export default function Projects() {
                     padding: 0
                   }}
                 >
-                  View Architecture <ArrowRight size={16} />
+                  Details <ArrowRight size={16} />
                 </button>
 
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{
-                    color: '#94a3b8',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '6px',
-                    textDecoration: 'none',
-                    fontSize: '0.875rem',
-                    transition: 'color 0.2s ease'
-                  }}
-                  onMouseEnter={(e) => (e.target.style.color = '#fff')}
-                  onMouseLeave={(e) => (e.target.style.color = '#94a3b8')}
-                >
-                  <GithubIcon size={16} /> Code
-                </a>
+                <div style={{ display: 'flex', gap: '16px' }}>
+                  {project.link && (
+                    <a
+                      onClick={(e) => e.stopPropagation()}
+                      href={project.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      style={{
+                        color: '#10b981',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                        textDecoration: 'none',
+                        fontSize: '0.875rem',
+                        transition: 'color 0.2s ease'
+                      }}
+                      onMouseEnter={(e) => (e.target.style.color = '#34d399')}
+                      onMouseLeave={(e) => (e.target.style.color = '#10b981')}
+                    >
+                      <ExternalLink size={16} /> Live Demo
+                    </a>
+                  )}
+
+                  <a
+                    onClick={(e) => e.stopPropagation()}
+                    href={project.githubUrl || "#"}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{
+                      color: '#94a3b8',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '6px',
+                      textDecoration: 'none',
+                      fontSize: '0.875rem',
+                      transition: 'color 0.2s ease'
+                    }}
+                    onMouseEnter={(e) => (e.target.style.color = '#fff')}
+                    onMouseLeave={(e) => (e.target.style.color = '#94a3b8')}
+                  >
+                    <GithubIcon size={16} /> Code
+                  </a>
+                </div>
               </div>
 
             </div>
